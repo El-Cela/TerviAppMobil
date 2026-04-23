@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="principal">#000F18</color>
+    <color name="secundario">#000000</color>
+
+
+    <color name="Cafe">#9272e4</color>
+    <color name="Morado">#E7C1BA</color>
+    <color name="Rosa">#E7C1BA</color>
+    <color name="Morado2">#5f4467</color>
+
+    <color name="Blanco">#E7DFDD</color>
+    <color name="Negro">#000000</color>
+</resources>

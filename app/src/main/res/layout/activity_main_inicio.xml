@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layoud_degradado">
+
+    <View
+        android:id="@+id/ViewSub"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:background="@color/principal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Sesion"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_degradado_naranja"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="@string/btn_Sesion"
+        android:textAllCaps="false"
+        android:textColor="@color/Blanco"
+
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btn_Registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Registrar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_degradado_azuloscuro"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="@string/btn_registrar"
+        android:textAllCaps="false"
+
+        android:textColor="@color/Blanco"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="AI continuar aceptas nuestra Condiciones de uso Y Politica de privacidad by. NetherStudios_Itsch"
+        android:textAlignment="center"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="TERVI"
+        android:textColor="@color/Blanco"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ViewSub" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Tu recuperacion, nuestra realidad"
+        android:textAlignment="center"
+        android:textColor="@color/Blanco"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Sesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewInf"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/layoud_degradado"
+        app:layout_constraintBottom_toTopOf="@+id/ViewSub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/ViewSub"
+        app:layout_constraintEnd_toEndOf="@+id/viewInf"
+        app:layout_constraintStart_toStartOf="@+id/viewInf"
+        app:layout_constraintTop_toTopOf="@+id/viewInf"
+        app:srcCompat="@drawable/lososnfondo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_degradado_naranja"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="ES"
+        android:textAllCaps="false"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

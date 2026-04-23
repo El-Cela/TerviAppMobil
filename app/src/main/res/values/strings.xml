@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">TerviApp</string>
+    <string name="btn_Sesion">Iniciar sesion</string>
+    <string name="btn_registrar">Crear cuenta</string>
+    <string name="textUsuario">Usuarios</string>
+    <string name="textContraseña">Contraseña</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <!-- String para pantalla principal -->
+    <string name="objetivos">Objetivos del día</string>
+    <string name="como_est_dia">¿Que has hecho hoy?</string>
+    <string name="btn_diario">Diario</string>
+    <string name="proximo_en">Proximo en: </string>
+    <string name="prom_respuesta">Respuesta</string>
+    <string name="perfil">Ver Perfil</string>
+    <string name="btn_hacer">Ir</string>
+    <string name="objetivo1">5 flexiones</string>
+    <string name="objetivo2">4 estiramientos</string>
+    <string name="objetivo3">Caminar 5 minutos</string>
+    <string name="avance">¿Que tanto has progresado?</string>
+    <string name="escanear">Escanear</string>
+
+
+    <!-- Botones generales -->
+    <string name="regresar">Regresar</string>
+
+
+    <!-- Strings del perfil -->
+    <string name="usser">Usuario: Jose98</string>
+    <string name="id_usser">Id: 00038</string>
+    <string name="nombre">Nombre: Jose</string>
+    <string name="dias_t">Dias en tratamiento: 5</string>
+    <string name="apellidos">Apellidos: Lopez Gonzales</string>
+    <string name="genero">Genero: Masculino</string>
+    <string name="peso">Peso: 89 kg</string>
+    <string name="altura">Altura: 1.7 metros</string>
+    <string name="perfil_text">Datos de la cuenta</string>
+    <string name="perfil_text2">Datos personales</string>
+    <string name="bienvenida">Bienvenido Jose98</string>
+
+
+    <!-- String resumen -->
+    <string name="resumen_text">Resumen de actividad</string>
+    <string name="resumen_text2">Ejercicios completados</string>
+    <string name="objetivos_c">Retos del dia completados: 12</string>
+    <string name="terapias_c">Terapias completadas: 3</string>
+    <string name="racha">Dias en Racha: 3</string>
+
+
+    <!-- String diario -->
+    <string name="diario_text">Diario de actividades</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="anterior">Anterior</string>
+    <string name="registrar">Registrar</string>
+    <string name="fecha">Fecha: 22/04/2026</string>
+    <string name="registro">El dia de hoy realice 2 ejercicios extras, me senti en condicion para hacerlo</string>
+
+
+    <!-- String Iniicio de sesion -->
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Usuario</string>
+    <string name="title_iniciar_sesion">Iniciar sesion</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar o registrarse</string>
+    <string name="action_sign_in_short">Iniciar sesion</string>
+    <string name="welcome">"Bienvenido !"</string>
+    <string name="invalid_username">No es un usuario valido</string>
+    <string name="invalid_password">La contraseña debe tener >5 caracteres</string>
+    <string name="login_failed">"Inicio de sesion fallido"</string>
+
+
+    <!-- Strings para preguntas -->
+    <string-array name="preguntas_diarias">
+        <item>¿Cómo te sientes hoy?</item>
+        <item>¿Qué es lo que más te emociona de esta semana?</item>
+        <item>¿Ya bebiste suficiente agua hoy?</item>
+        <item>Define tu dia con un emoji</item>
+        <item>¿Como estuvo el desayuno?</item>
+        <item>¿Si fueras un ave cual serias?</item>
+    </string-array>
+
+
+    <!-- Array String para estados de animo -->
+    <string-array name="estado_animo">
+        <item>Feliz</item>
+        <item>Feliz</item>
+        <item>Feliz</item>
+        <item>Feliz</item>
+        <item>Feliz</item>
+    </string-array>
+</resources>
