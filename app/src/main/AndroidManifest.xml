@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TERVI">
         <activity
+            android:name=".EscanerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TERVI" />
+        <activity
+            android:name=".ResumenActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainPrincipal"
             android:exported="false" />
         <activity

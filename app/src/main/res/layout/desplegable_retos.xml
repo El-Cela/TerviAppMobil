@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_retos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/title_retos"
+        android:textColor="@color/principal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Vista de reto 1 -->
+    <View
+        android:id="@+id/view_reto"
+        android:layout_width="371dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="148dp"
+        android:foreground="@drawable/borde_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Vista de reto 2 -->
+
+
+    <TextView
+        android:id="@+id/reto01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/objetivo1"
+        android:textColor="@color/Blanco"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_reto"
+        app:layout_constraintStart_toStartOf="@+id/view_reto"
+        app:layout_constraintTop_toTopOf="@+id/view_reto"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <Button
+        android:id="@+id/btn_completar"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/Negro"
+        android:text="@string/completar"
+        app:layout_constraintBottom_toBottomOf="@+id/view_reto"
+        app:layout_constraintEnd_toEndOf="@+id/view_reto" />
+
+    <!-- Vista de reto 3 -->
+
+    <View
+        android:id="@+id/view_reto2"
+        android:layout_width="371dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="72dp"
+        android:foreground="@drawable/borde_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_reto" />
+
+    <TextView
+        android:id="@+id/reto02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/objetivo1"
+        android:textColor="@color/Blanco"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_reto2"
+        app:layout_constraintStart_toStartOf="@+id/view_reto2"
+        app:layout_constraintTop_toTopOf="@+id/view_reto2"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <Button
+        android:id="@+id/btn_completar2"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/Negro"
+        android:text="@string/completar"
+        app:layout_constraintBottom_toBottomOf="@+id/view_reto2"
+        app:layout_constraintEnd_toEndOf="@+id/view_reto2" />
+
+
+    <View
+        android:id="@+id/view_Conv"
+        android:layout_width="371dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="72dp"
+        android:foreground="@drawable/borde_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_reto2" />
+
+    <TextView
+        android:id="@+id/reto03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/objetivo1"
+        android:textColor="@color/Blanco"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_Conv"
+        app:layout_constraintStart_toStartOf="@+id/view_Conv"
+        app:layout_constraintTop_toTopOf="@+id/view_Conv"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <Button
+        android:id="@+id/btn_completar3"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/Negro"
+        android:text="@string/completar"
+        app:layout_constraintBottom_toBottomOf="@+id/view_Conv"
+        app:layout_constraintEnd_toEndOf="@+id/view_Conv" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="35dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/layoud_degradado2">
+>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilActivity">
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="374dp"
+        android:layout_height="277dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="544dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/borde_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_datos_pers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/perfil_text2"
+        android:textAlignment="center"
+        android:textColor="@color/secundario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <Button
+        android:id="@+id/nombre"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="288dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:fontFamily="@font/alfa_slab_one"
+        android:foregroundTint="#DB3030"
+        android:text="@string/nombre"
+        android:textColor="@color/principal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <Button
+        android:id="@+id/apellidos"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="288dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/apellidos"
+        android:textColor="@color/principal"
+        android:textSize="18sp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <Button
+        android:id="@+id/genero"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="288dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="192dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/genero"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <TextView
+        android:id="@+id/conv_dia4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/perfil_text"
+        android:textAlignment="center"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/conv_dia3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/perfil_text"
+        android:textAlignment="center"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/btn_qr"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="128dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/secundario"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/regresar"
+        android:textColor="@color/Blanco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/Blanco"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_perfil"
+        android:layout_width="145dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircularImagen"
+
+        app:strokeWidth="2dp" />
+
+
+    <TextView
+        android:id="@+id/text_objetivos"
+        android:layout_width="298dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="184dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/bienvenida"
+        android:textAlignment="textStart"
+        android:textColor="@color/secundario"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="374dp"
+        android:layout_height="277dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/borde_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/text_usuario"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="288dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/usser"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3" />
+
+
+    <Button
+        android:id="@+id/id"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="288dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="84dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/id_usser"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/dias_t"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="288dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/dias_t"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/conv_dia4" />
+
+    <TextView
+        android:id="@+id/text_datos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/perfil_text"
+        android:textAlignment="center"
+        android:textColor="@color/secundario"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
