@@ -66,11 +66,31 @@ class MainActivity : AppCompatActivity() {
             // Referencias
             val btnCompletar = view.findViewById<Button>(R.id.btn_completar)
             val txtReto = view.findViewById<TextView>(R.id.reto01)
+            val btnCompletar2 = view.findViewById<Button>(R.id.btn_completar2)
+            val txtReto2 = view.findViewById<TextView>(R.id.reto02)
+            val btnCompletar3 = view.findViewById<Button>(R.id.btn_completar3)
+            val txtReto3 = view.findViewById<TextView>(R.id.reto03)
 
             // Acción del botón
             btnCompletar.setOnClickListener {
                 txtReto.text = "Completado"
                 btnCompletar.isEnabled = false
+
+                Toast.makeText(this, "Reto completado", Toast.LENGTH_SHORT).show()
+            }
+
+            // Acción del botón2
+            btnCompletar2.setOnClickListener {
+                txtReto2.text = "Completado"
+                btnCompletar3.isEnabled = false
+
+                Toast.makeText(this, "Reto completado", Toast.LENGTH_SHORT).show()
+            }
+
+            // Acción del botón3
+            btnCompletar3.setOnClickListener {
+                txtReto3.text = "Completado"
+                btnCompletar3.isEnabled = false
 
                 Toast.makeText(this, "Reto completado", Toast.LENGTH_SHORT).show()
             }

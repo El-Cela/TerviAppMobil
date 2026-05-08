@@ -178,26 +178,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/text_usuario"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="288dp"
         android:layout_height="66dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="@string/usser"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="@+id/view3" />
-
 
     <Button
         android:id="@+id/id"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="288dp"
         android:layout_height="66dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="88dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="@string/id_usser"
         android:textSize="18sp"
@@ -214,6 +216,7 @@
         android:text="@string/dias_t"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/conv_dia4" />
 

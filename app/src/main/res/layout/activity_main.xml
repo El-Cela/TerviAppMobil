@@ -136,7 +136,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-medium"
-            android:text="5 flexiones,  8 Sentadillas, 3 Flexiones, 5 Alim. Independiente"
+            android:text="5 flexiones,  8 Sentadillas, 3 Flexiones"
             android:textColor="@color/Blanco"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/view_Conv"
