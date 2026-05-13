@@ -9,12 +9,22 @@ import java.io.IOException
 class LoginDataSource {
 
     fun login(username: String, password: String): Result<LoggedInUser> {
-        try {
-            // TODO: handle loggedInUser authentication
-            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Jane Doe")
-            return Result.Success(fakeUser)
+        return try {
+            // Usuarios hardcodeados para validación local
+            val hardcodedUsers = mapOf(
+                "admin@tervi.com" to "123456",
+                "user@test.com" to "password"
+            )
+
+            if (hardcodedUsers[username] == password) {
+                val displayName = username.substringBefore("@")
+                val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), displayName)
+                Result.Success(fakeUser)
+            } else {
+                Result.Error(IOException("Usuario o contraseña incorrectos"))
+            }
         } catch (e: Throwable) {
-            return Result.Error(IOException("Error logging in", e))
+            Result.Error(IOException("Error logging in", e))
         }
     }
 
