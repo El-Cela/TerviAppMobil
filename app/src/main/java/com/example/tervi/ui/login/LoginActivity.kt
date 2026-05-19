@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.EditText
 import android.widget.Toast
 import com.example.tervi.MainActivity
+import com.example.tervi.data.SessionManager
 import com.example.tervi.databinding.ActivityLoginBinding
 
 import com.example.tervi.R
@@ -110,6 +111,10 @@ class LoginActivity : AppCompatActivity() {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
         
+        // Guardar sesión localmente
+        val sessionManager = SessionManager(this)
+        sessionManager.saveUser(model.userId, displayName, model.email, model.healthStatus)
+
         Toast.makeText(
             applicationContext,
             "$welcome $displayName",

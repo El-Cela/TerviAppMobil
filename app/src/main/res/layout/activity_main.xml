@@ -21,13 +21,93 @@
             android:layout_width="379dp"
             android:layout_height="140dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="12dp"
             android:background="@drawable/borde_redondo"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="379dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/borde_redondo"
+            app:layout_constraintTop_toBottomOf="@+id/view4"
+            tools:layout_editor_absoluteX="13dp" />
+
+
+        <TextView
+            android:id="@+id/ejercicio_titulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Ejercicio"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/puntaje_titulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="192dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Puntaje"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4"
+            app:layout_constraintVertical_bias="0.381" />
+
+
+        <TextView
+            android:id="@+id/puntaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="123"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/nombrre_ejercicio_puntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Ejercicio tal"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/avance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="Diario"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view6" />
 
         <Button
             android:id="@+id/btn_resumen"
@@ -37,31 +117,16 @@
             android:fontFamily="@font/alfa_slab_one"
             android:text="Resumen"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/view4"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
-            app:layout_constraintStart_toStartOf="@+id/view4"
-            app:layout_constraintTop_toTopOf="@+id/view4" />
-
-
-        <TextView
-            android:id="@+id/avance"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Diario"
-            android:textAlignment="center"
-            android:textColor="@color/secundario"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/view4"
-            app:layout_constraintTop_toTopOf="@+id/view4" />
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.534"
+            app:layout_constraintStart_toStartOf="@+id/view6" />
 
         <Button
             android:id="@+id/btn_escaner"
             style="@style/Widget.Material3.Button"
-            android:layout_width="125dp"
-            android:layout_height="45dp"
+            android:layout_width="132dp"
+            android:layout_height="46dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:backgroundTint="@color/Negro"
@@ -69,6 +134,21 @@
             android:text="@string/escanear"
             android:textColor="@color/Blanco"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="132dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="@color/Negro"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="Salir"
+            android:textColor="@color/Blanco"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:strokeWidth="2dp" />
 
@@ -147,52 +227,13 @@
             android:layout_width="376dp"
             android:layout_height="134dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/borde_redondo"
-            app:layout_constraintBottom_toTopOf="@+id/view4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_Conv" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="126dp"
-            android:layout_height="128dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3"
-            app:srcCompat="@drawable/barradecarga2" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="126dp"
-            android:layout_height="128dp"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3"
-            app:srcCompat="@drawable/barradecargamano2" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="126dp"
-            android:layout_height="128dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/view3"
-            app:srcCompat="@drawable/barradecargasentadilla6" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="126dp"
-            android:layout_height="128dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/view3"
-            app:srcCompat="@drawable/barradecargacuchara0" />
 
         <TextView
             android:id="@+id/text_progreso"
@@ -200,9 +241,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/alfa_slab_one"
-            android:text="Progreso"
+            android:text="Progreso actual"
             android:textAlignment="center"
-            android:textColor="@color/secundario"
+            android:textColor="@color/Blanco"
             app:layout_constraintEnd_toEndOf="@+id/view3"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/view3"
@@ -221,6 +262,100 @@
             app:layout_constraintBottom_toBottomOf="@+id/view_Conv"
             app:layout_constraintEnd_toEndOf="@+id/view_Conv" />
 
+        <TextView
+            android:id="@+id/ejercicio_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Ejercicio"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/repeticiones_programadas_titulo"
+            android:layout_width="115dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Repeticiones programadas"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/repeticiones_hechas_titulo"
+            android:layout_width="115dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="272dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Repeticiones hechas"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/ejercicio"
+            android:layout_width="98dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Flexión de Rodilla en Camilla"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/repeticiones_programadas"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="84dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="8"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/repeticiones_hechas"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="84dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="2"
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/text_puntaje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:textAlignment="center"
+            android:text="Puntajes Recientes"
+            android:textColor="@color/Blanco"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            tools:layout_editor_absoluteY="528dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

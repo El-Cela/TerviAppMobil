@@ -10,6 +10,12 @@
     <color name="Rosa">#E7C1BA</color>
     <color name="Morado2">#5f4467</color>
 
-    <color name="Blanco">#E7DFDD</color>
+    <color name="Blanco">#FFFFFF</color>
     <color name="Negro">#000000</color>
+
+    <color name="azul_tervi">#0056b3</color>
+    <color name="azul_dark">#003d7a</color>
+    <color name="dorado_tervi">#D4AF37</color>
+    <color name="gris_fondo">#f4f7f9</color>
+
 </resources>
