@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/principal">
+    android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ResumenActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/azul_tervi">
 
-    <TextView
-        android:id="@+id/ejercicos_comp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/perfil_text"
-        android:textAlignment="center"
-        android:textColor="@color/Blanco"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ResumenActivity">
 
-    <TextView
-        android:id="@+id/conv_dia3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/perfil_text"
-        android:textAlignment="center"
-        android:textColor="@color/Blanco"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+            <View
+                android:id="@+id/view7"
+                android:layout_width="366dp"
+                android:layout_height="144dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="292dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/borde_redondo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_regresar_resumen"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="107dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/regresar"
-        android:textColor="@color/Blanco"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/Blanco"
-        app:strokeWidth="2dp" />
+            <Button
+                android:id="@+id/btn_historial_actividades"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="291dp"
+                android:layout_height="85dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Actividades"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view7"
+                app:layout_constraintEnd_toEndOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toTopOf="@+id/view7" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="366dp"
+                android:layout_height="144dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="480dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/borde_redondo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_regresar_resumen"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="107dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/regresar"
+                android:textColor="@color/Blanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/Blanco"
+                app:strokeWidth="2dp" />
 
 
-    <TextView
-        android:id="@+id/text_resumen_obj"
-        android:layout_width="298dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/resumen_text"
-        android:textAlignment="textStart"
-        android:textColor="@color/Blanco"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/text_resumen_obj"
+                android:layout_width="298dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/resumen_text"
+                android:textAlignment="textStart"
+                android:textColor="@color/Blanco"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.185"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="375dp"
-        android:layout_height="360dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/borde_redondo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="366dp"
+                android:layout_height="144dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="124dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/borde_redondo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text_retos_compl"
-        android:layout_width="275dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/objetivos_c"
-        android:textAlignment="textStart"
-        android:textColor="@color/Blanco"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+            <TextView
+                android:id="@+id/ejercicios_compl"
+                android:layout_width="275dp"
+                android:layout_height="76dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/objetivos_c"
+                android:textAlignment="textStart"
+                android:textColor="@color/Blanco"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
 
-    <TextView
-        android:id="@+id/text_terapias_compl"
-        android:layout_width="277dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="136dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/terapias_c"
-        android:textAlignment="textStart"
-        android:textColor="@color/Blanco"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+            <TextView
+                android:id="@+id/text_progreso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/resumen_text2"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
 
-    <TextView
-        android:id="@+id/text_racha"
-        android:layout_width="277dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="248dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/racha"
-        android:textAlignment="textStart"
-        android:textColor="@color/Blanco"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+            <Button
+                android:id="@+id/btn_historial_ejercicios"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="291dp"
+                android:layout_height="85dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Ejercicios"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view8"
+                app:layout_constraintEnd_toEndOf="@+id/view8"
+                app:layout_constraintStart_toStartOf="@+id/view8"
+                app:layout_constraintTop_toTopOf="@+id/view8" />
 
-    <TextView
-        android:id="@+id/text_progreso"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/resumen_text2"
-        android:textAlignment="center"
-        android:textColor="@color/Blanco"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

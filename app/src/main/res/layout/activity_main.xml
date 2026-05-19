@@ -1,362 +1,371 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/principal">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/layoud_degradado2"
-        tools:context=".Principal">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/principal">
 
-
-        <View
-            android:id="@+id/view4"
-            android:layout_width="379dp"
-            android:layout_height="140dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/borde_redondo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view3" />
-
-        <View
-            android:id="@+id/view6"
-            android:layout_width="379dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/borde_redondo"
-            app:layout_constraintTop_toBottomOf="@+id/view4"
-            tools:layout_editor_absoluteX="13dp" />
-
-
-        <TextView
-            android:id="@+id/ejercicio_titulo2"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Ejercicio"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/view4"
-            app:layout_constraintTop_toTopOf="@+id/view4" />
-
-        <TextView
-            android:id="@+id/puntaje_titulo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="192dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Puntaje"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/view4"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
-            app:layout_constraintTop_toTopOf="@+id/view4"
-            app:layout_constraintVertical_bias="0.381" />
+            android:background="@drawable/layoud_degradado2"
+            tools:context=".Principal">
 
 
-        <TextView
-            android:id="@+id/puntaje"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="200dp"
-            android:layout_marginBottom="32dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="123"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/view4"
-            app:layout_constraintEnd_toEndOf="@+id/view4" />
-
-        <TextView
-            android:id="@+id/nombrre_ejercicio_puntos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Ejercicio tal"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/view4"
-            app:layout_constraintStart_toStartOf="@+id/view4" />
-
-        <TextView
-            android:id="@+id/avance"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Diario"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            app:layout_constraintEnd_toEndOf="@+id/view6"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view6" />
-
-        <Button
-            android:id="@+id/btn_resumen"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="291dp"
-            android:layout_height="85dp"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Resumen"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/view6"
-            app:layout_constraintHorizontal_bias="0.534"
-            app:layout_constraintStart_toStartOf="@+id/view6" />
-
-        <Button
-            android:id="@+id/btn_escaner"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="132dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:backgroundTint="@color/Negro"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="@string/escanear"
-            android:textColor="@color/Blanco"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:strokeWidth="2dp" />
-
-        <Button
-            android:id="@+id/btn_logout"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="132dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="4dp"
-            android:backgroundTint="@color/Negro"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Salir"
-            android:textColor="@color/Blanco"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:strokeWidth="2dp" />
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_perfil"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/avatar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/CircularImagen"
-
-            app:strokeWidth="2dp" />
-
-        <Button
-            android:id="@+id/btn_perfil"
-            style="@style/Widget.Material3.Button.OutlinedButton"
-            android:layout_width="119dp"
-            android:layout_height="48dp"
-            android:backgroundTint="@color/Negro"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Perfil"
-            android:textColor="@color/Blanco"
-            app:layout_constraintEnd_toEndOf="@+id/img_perfil"
-            app:layout_constraintStart_toStartOf="@+id/img_perfil"
-            app:layout_constraintTop_toBottomOf="@+id/img_perfil"
-            app:strokeColor="@color/Blanco"
-            app:strokeWidth="2dp" />
-
-        <TextView
-            android:id="@+id/text_objetivos"
-            android:layout_width="219dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="@string/objetivos"
-            android:textAlignment="textStart"
-            android:textColor="@color/Blanco"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.182"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_perfil" />
-
-        <View
-            android:id="@+id/view_Conv"
-            android:layout_width="370dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:foreground="@drawable/btn_degradado_azul"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_objetivos" />
+            <View
+                android:id="@+id/view4"
+                android:layout_width="379dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/borde_redondo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 
-        <TextView
-            android:id="@+id/obj_1"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="5 flexiones,  8 Sentadillas, 3 Flexiones"
-            android:textColor="@color/Blanco"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/view_Conv"
-            app:layout_constraintTop_toTopOf="@+id/view_Conv" />
+            <View
+                android:id="@+id/view6"
+                android:layout_width="379dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/borde_redondo"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                tools:layout_editor_absoluteX="16dp" />
 
-        <View
-            android:id="@+id/view3"
-            android:layout_width="376dp"
-            android:layout_height="134dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/borde_redondo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_Conv" />
+            <TextView
+                android:id="@+id/ejercicio_titulo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Ejercicio"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                app:layout_constraintVertical_bias="0.381" />
 
-        <TextView
-            android:id="@+id/text_progreso"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Progreso actual"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            app:layout_constraintEnd_toEndOf="@+id/view3"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <TextView
+                android:id="@+id/puntaje_titulo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Puntaje"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                app:layout_constraintVertical_bias="0.381" />
 
-        <Button
-            android:id="@+id/btn_retos_comp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/btn_degradado_azuloscuro"
-            android:fontFamily="@font/alfa_slab_one"
-            android:text="Ir"
-            android:textColor="@color/Blanco"
-            app:layout_constraintBottom_toBottomOf="@+id/view_Conv"
-            app:layout_constraintEnd_toEndOf="@+id/view_Conv" />
+            <TextView
+                android:id="@+id/puntaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="72dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="123"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="@+id/view4" />
 
-        <TextView
-            android:id="@+id/ejercicio_titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="28dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Ejercicio"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <TextView
+                android:id="@+id/nombrre_ejercicio_puntos"
+                android:layout_width="94dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="28dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Ejercicio tal"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                app:layout_constraintVertical_bias="0.827" />
 
-        <TextView
-            android:id="@+id/repeticiones_programadas_titulo"
-            android:layout_width="115dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="128dp"
-            android:layout_marginTop="28dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Repeticiones programadas"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <TextView
+                android:id="@+id/avance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Historia"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                app:layout_constraintEnd_toEndOf="@+id/view6"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view6" />
 
-        <TextView
-            android:id="@+id/repeticiones_hechas_titulo"
-            android:layout_width="115dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="272dp"
-            android:layout_marginTop="28dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Repeticiones hechas"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <Button
+                android:id="@+id/btn_resumen"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="291dp"
+                android:layout_height="85dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Resumen"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view6"
+                app:layout_constraintHorizontal_bias="0.534"
+                app:layout_constraintStart_toStartOf="@+id/view6"
+                app:layout_constraintTop_toTopOf="@+id/view6" />
 
-        <TextView
-            android:id="@+id/ejercicio"
-            android:layout_width="98dp"
-            android:layout_height="54dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Flexión de Rodilla en Camilla"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <Button
+                android:id="@+id/btn_escaner"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="132dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="@color/Negro"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/escanear"
+                android:textColor="@color/Blanco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="2dp" />
 
-        <TextView
-            android:id="@+id/repeticiones_programadas"
-            android:layout_width="76dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="148dp"
-            android:layout_marginTop="84dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="8"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <Button
+                android:id="@+id/btn_logout"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="132dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/Negro"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Salir"
+                android:textColor="@color/Blanco"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="2dp" />
 
-        <TextView
-            android:id="@+id/repeticiones_hechas"
-            android:layout_width="76dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="276dp"
-            android:layout_marginTop="84dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="2"
-            android:textAlignment="center"
-            android:textColor="@color/Blanco"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_perfil"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircularImagen"
 
-        <TextView
-            android:id="@+id/text_puntaje"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/alfa_slab_one"
-            android:textAlignment="center"
-            android:text="Puntajes Recientes"
-            android:textColor="@color/Blanco"
-            app:layout_constraintEnd_toEndOf="@+id/view4"
-            app:layout_constraintStart_toStartOf="@+id/view4"
-            tools:layout_editor_absoluteY="528dp" />
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btn_perfil"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="119dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/Negro"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Perfil"
+                android:textColor="@color/Blanco"
+                app:layout_constraintEnd_toEndOf="@+id/img_perfil"
+                app:layout_constraintStart_toStartOf="@+id/img_perfil"
+                app:layout_constraintTop_toBottomOf="@+id/img_perfil"
+                app:strokeColor="@color/Blanco"
+                app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/text_objetivos"
+                android:layout_width="219dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/objetivos"
+                android:textAlignment="textStart"
+                android:textColor="@color/Blanco"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.182"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_perfil" />
+
+            <View
+                android:id="@+id/view_Conv"
+                android:layout_width="370dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:foreground="@drawable/btn_degradado_azul"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_objetivos" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/obj_1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="5 flexiones,  8 Sentadillas, 3 Flexiones"
+                android:textColor="@color/Blanco"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/view_Conv"
+                app:layout_constraintTop_toTopOf="@+id/view_Conv" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="376dp"
+                android:layout_height="134dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/borde_redondo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_Conv" />
+
+            <TextView
+                android:id="@+id/text_progreso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Progreso actual"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <Button
+                android:id="@+id/btn_retos_comp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_degradado_azuloscuro"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Ir"
+                android:textColor="@color/Blanco"
+                app:layout_constraintBottom_toBottomOf="@+id/view_Conv"
+                app:layout_constraintEnd_toEndOf="@+id/view_Conv" />
+
+            <TextView
+                android:id="@+id/ejercicio_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Ejercicio"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/repeticiones_programadas_titulo"
+                android:layout_width="117dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Repeticiones programadas"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/repeticiones_hechas_titulo"
+                android:layout_width="115dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="272dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Repeticiones hechas"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/ejercicio"
+                android:layout_width="98dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="64dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Flexión de Rodilla en Camilla"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/repeticiones_programadas"
+                android:layout_width="76dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="148dp"
+                android:layout_marginTop="84dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="8"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/repeticiones_hechas"
+                android:layout_width="76dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="276dp"
+                android:layout_marginTop="84dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/text_puntaje"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="Puntajes Recientes"
+                android:textAlignment="center"
+                android:textColor="@color/Blanco"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

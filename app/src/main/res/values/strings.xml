@@ -48,7 +48,7 @@
     <!-- String resumen -->
     <string name="resumen_text">Resumen de actividad</string>
     <string name="resumen_text2">Ejercicios completados</string>
-    <string name="objetivos_c">Retos del dia completados: 12</string>
+    <string name="objetivos_c">Ejercicios completados:1</string>
     <string name="terapias_c">Terapias completadas: 3</string>
     <string name="racha">Dias en Racha: 3</string>
 

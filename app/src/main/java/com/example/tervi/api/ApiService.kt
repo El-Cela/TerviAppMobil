@@ -20,7 +20,8 @@ interface ApiService {
     @GET("actions/get_actividades.php")
     suspend fun getActividades(
         @Query("usuario_id") userId: String,
-        @Query("nombre_usuario") userName: String
+        @Query("nombre_usuario") userName: String,
+        @Query("_") timestamp: Long = System.currentTimeMillis() // Parámetro para evitar caché
     ): ApiResponseActividades
 }
 
@@ -32,24 +33,25 @@ data class ApiResponse(
 )
 
 data class ApiResponseActividades(
-    val status: String,
+    val status: String?,
     val message: String?,
     val data: List<ActividadData>?,
-    val avances: List<AvanceData>?
+    val avances: List<AvanceData>?,
+    val completados_count: Int? = 0 // Nueva propiedad para el contador
 )
 
 data class AvanceData(
-    val id_avance: Int,
-    val ejercicio_nombre: String,
-    val puntos: Int,
+    val id_avance: Int?,
+    val ejercicio_nombre: String?,
+    val puntos: Int?,
     val fecha_registro: String?,
     val tipo_entorno: String?
 )
 
 data class ActividadData(
-    val ejercicio: String,
-    val repeticiones_programadas: Int,
-    val repeticiones_hechas: Int
+    val ejercicio: String?,
+    val repeticiones_programadas: Int?,
+    val repeticiones_hechas: Int?
 )
 
 data class UserData(

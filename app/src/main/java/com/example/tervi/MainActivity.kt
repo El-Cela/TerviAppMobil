@@ -13,11 +13,13 @@ import com.example.tervi.data.SessionManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 import androidx.lifecycle.lifecycleScope
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.tervi.api.RetrofitClient
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     //Variables globales
+    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
     private lateinit var btn_retos_comp: Button
     private lateinit var btn_resumen : Button
     private lateinit var btn_escaner : Button
@@ -64,7 +66,17 @@ class MainActivity : AppCompatActivity() {
         txt_puntaje = findViewById(R.id.puntaje)
         txt_nombre_ejercicio_puntos = findViewById(R.id.nombrre_ejercicio_puntos)
 
-        cargarActividades(userId, userName)
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout)
+        swipeRefreshLayout.setOnRefreshListener {
+            val sManager = SessionManager(this)
+            val uId = sManager.getUserId()
+            val uName = sManager.getUserName()
+            if (uId != null && uName != null) {
+                cargarActividades(uId, uName)
+            } else {
+                swipeRefreshLayout.isRefreshing = false
+            }
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -142,11 +154,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        val sessionManager = SessionManager(this)
+        val userId = sessionManager.getUserId()
+        val userName = sessionManager.getUserName()
+
+        if (userId != null && userName != null) {
+            cargarActividades(userId, userName)
+        }
+    }
+
     private fun cargarActividades(userId: String, userName: String) {
         android.util.Log.d("DEBUG_APP", "Cargando actividades para: ID=$userId, Name=$userName")
         lifecycleScope.launch {
             try {
-                val response = RetrofitClient.instance.getActividades(userId, userName)
+                // Pasamos el tiempo actual para forzar la recarga desde el servidor (cache-busting)
+                val response = RetrofitClient.instance.getActividades(userId, userName, System.currentTimeMillis())
                 android.util.Log.d("DEBUG_APP", "Respuesta recibida: status=${response.status}, message=${response.message}")
 
                 if (response.status == "success") {
@@ -154,9 +178,9 @@ class MainActivity : AppCompatActivity() {
                     if (!response.data.isNullOrEmpty()) {
                         android.util.Log.d("DEBUG_APP", "Datos de actividad encontrados: ${response.data.size} items")
                         val actividad = response.data[0]
-                        txt_ejercicio.text = actividad.ejercicio
-                        txt_rep_programadas.text = actividad.repeticiones_programadas.toString()
-                        txt_rep_hechas.text = actividad.repeticiones_hechas.toString()
+                        txt_ejercicio.text = actividad.ejercicio ?: "N/A"
+                        txt_rep_programadas.text = (actividad.repeticiones_programadas ?: 0).toString()
+                        txt_rep_hechas.text = (actividad.repeticiones_hechas ?: 0).toString()
                     } else {
                         android.util.Log.w("DEBUG_APP", "La lista de actividades (data) está vacía o es nula")
                     }
@@ -165,18 +189,20 @@ class MainActivity : AppCompatActivity() {
                     if (!response.avances.isNullOrEmpty()) {
                         android.util.Log.d("DEBUG_APP", "Datos de avances encontrados: ${response.avances.size} items")
                         val avance = response.avances[0]
-                        txt_puntaje.text = avance.puntos.toString()
-                        txt_nombre_ejercicio_puntos.text = avance.ejercicio_nombre
+                        txt_puntaje.text = (avance.puntos ?: 0).toString()
+                        txt_nombre_ejercicio_puntos.text = avance.ejercicio_nombre ?: "N/A"
                     } else {
                         android.util.Log.w("DEBUG_APP", "La lista de avances está vacía o es nula")
                     }
                 } else {
                     android.util.Log.e("DEBUG_APP", "Error en la respuesta: ${response.message}")
-                    Toast.makeText(this@MainActivity, "No hay actividades disponibles: ${response.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "No hay actividades: ${response.message}", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 android.util.Log.e("DEBUG_APP", "Error fatal al cargar actividades", e)
                 Toast.makeText(this@MainActivity, "Error de conexión: ${e.message}", Toast.LENGTH_SHORT).show()
+            } finally {
+                swipeRefreshLayout.isRefreshing = false
             }
         }
     }
