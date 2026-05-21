@@ -30,7 +30,12 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
                         displayName = result.data.displayName,
                         userId = result.data.userId,
                         email = result.data.email,
-                        healthStatus = result.data.healthStatus
+                        healthStatus = result.data.healthStatus,
+                        username = result.data.username,
+                        firstName = result.data.firstName,
+                        lastNameP = result.data.lastNameP,
+                        lastNameM = result.data.lastNameM,
+                        gender = result.data.gender
                     ))
             } else {
                 _loginResult.value = LoginResult(error = R.string.login_failed)
@@ -59,6 +64,6 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
     // A placeholder password validation check
     private fun isPasswordValid(password: String): Boolean {
-        return password.length > 5
+        return password.length > 3
     }
 }

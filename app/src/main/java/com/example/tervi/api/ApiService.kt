@@ -23,6 +23,14 @@ interface ApiService {
         @Query("nombre_usuario") userName: String,
         @Query("_") timestamp: Long = System.currentTimeMillis() // Parámetro para evitar caché
     ): ApiResponseActividades
+
+    // Obtener historial completo (actividades y avances)
+    @GET("actions/get_historial.php")
+    suspend fun getHistorial(
+        @Query("usuario_id") userId: String,
+        @Query("nombre_usuario") userName: String,
+        @Query("_") timestamp: Long = System.currentTimeMillis()
+    ): ApiResponseActividades
 }
 
 // Clases de modelo para las respuestas JSON
@@ -51,7 +59,8 @@ data class AvanceData(
 data class ActividadData(
     val ejercicio: String?,
     val repeticiones_programadas: Int?,
-    val repeticiones_hechas: Int?
+    val repeticiones_hechas: Int?,
+    val fecha_completado: String?
 )
 
 data class UserData(
@@ -59,14 +68,15 @@ data class UserData(
     val nombre_usu: String,
     val apellidoP_usu: String,
     val apellidoM_usu: String,
-    val edad_usu: Int,
-    val sexo_usu: String,
-    val peso_usu: Double?,
-    val altura_usu: Double?,
-    val correo_usu: String,
+    val edad_usu: Int? = 0,
+    val sexo_usu: String? = "N/A",
+    val peso_usu: Double? = null,
+    val altura_usu: Double? = null,
+    val correo_usu: String? = null,
     val usuario_usu: String,
-    val recetas_vistas: Int,
-    val estado_salud: String
+    val recetas_vistas: Int? = 0,
+    val estado_salud: String? = "N/A",
+    val causa_rehabilitacion: String? = "N/A"
 )
 
 data class DataModel(

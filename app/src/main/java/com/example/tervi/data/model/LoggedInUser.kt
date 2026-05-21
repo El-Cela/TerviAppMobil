@@ -7,5 +7,10 @@ data class LoggedInUser(
     val userId: String,
     val displayName: String,
     val email: String? = null,
-    val healthStatus: String? = null
+    val healthStatus: String? = null,
+    val username: String? = null,
+    val firstName: String? = null,
+    val lastNameP: String? = null,
+    val lastNameM: String? = null,
+    val gender: String? = null
 )

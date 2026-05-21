@@ -1,5 +1,6 @@
 package com.example.tervi.api
 
+import android.os.Build
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -7,9 +8,31 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    // Para pruebas en dispositivo físico usa tu IP local (ej: 192.168.1.74)
-    // Para pruebas en emulador usa 10.0.2.2
-    private const val BASE_URL = "http://192.168.1.81/tervi_api/"
+    // Detectar si es emulador para usar 10.0.2.2 o dispositivo físico con IP local
+    private val BASE_URL = if (isEmulator()) {
+        "http://10.0.2.2/tervi_api/"
+    } else {
+        "http://192.168.137.121/tervi_api/" // Cambia esta IP por la de tu PC si usas físico
+    }
+
+    private fun isEmulator(): Boolean {
+        return (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
+                || Build.FINGERPRINT.contains("generic")
+                || Build.FINGERPRINT.contains("unknown")
+                || Build.HARDWARE.contains("goldfish")
+                || Build.HARDWARE.contains("ranchu")
+                || Build.MODEL.contains("google_sdk")
+                || Build.MODEL.contains("Emulator")
+                || Build.MODEL.contains("Android SDK built for x86")
+                || Build.MANUFACTURER.contains("Genymotion")
+                || Build.PRODUCT.contains("sdk_google")
+                || Build.PRODUCT.contains("google_sdk")
+                || Build.PRODUCT.contains("sdk")
+                || Build.PRODUCT.contains("sdk_x86")
+                || Build.PRODUCT.contains("vbox86p")
+                || Build.PRODUCT.contains("emulator")
+                || Build.PRODUCT.contains("simulator")
+    }
 
     private val logger = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
@@ -21,8 +44,10 @@ object RetrofitClient {
 
     private val okHttp = OkHttpClient.Builder()
         .addInterceptor(logger)
-        .connectTimeout(15, java.util.concurrent.TimeUnit.SECONDS)
-        .readTimeout(15, java.util.concurrent.TimeUnit.SECONDS)
+        .connectTimeout(30, java.util.concurrent.TimeUnit.SECONDS)
+        .readTimeout(30, java.util.concurrent.TimeUnit.SECONDS)
+        .writeTimeout(30, java.util.concurrent.TimeUnit.SECONDS)
+        .retryOnConnectionFailure(true)
         .build()
 
     val instance: ApiService by lazy {

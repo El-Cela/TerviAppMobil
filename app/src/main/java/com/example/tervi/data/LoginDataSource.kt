@@ -23,7 +23,12 @@ class LoginDataSource {
                     userId = userData.id_usuario.toString(),
                     displayName = displayName,
                     email = userData.correo_usu,
-                    healthStatus = userData.estado_salud
+                    healthStatus = userData.estado_salud,
+                    username = userData.usuario_usu,
+                    firstName = userData.nombre_usu,
+                    lastNameP = userData.apellidoP_usu,
+                    lastNameM = userData.apellidoM_usu,
+                    gender = userData.sexo_usu
                 )
                 Result.Success(user)
             } else {
@@ -34,16 +39,11 @@ class LoginDataSource {
             // Log detallado para identificar el tipo de error
             android.util.Log.e("LOGIN_DEBUG", "ERROR EN LLAMADA REMOTA", e)
             
-            when (e) {
-                is java.net.ConnectException -> {
-                    android.util.Log.e("LOGIN_DEBUG", "No se pudo conectar al servidor. Revisa IP y red WiFi.")
-                }
-                is java.net.SocketTimeoutException -> {
-                    android.util.Log.e("LOGIN_DEBUG", "Tiempo de espera agotado. El servidor es lento o inaccesible.")
-                }
-                else -> {
-                    android.util.Log.e("LOGIN_DEBUG", "Error inesperado: ${e.message}")
-                }
+            val connectionError = when (e) {
+                is java.net.ConnectException -> "No se pudo conectar al servidor. Revisa la IP y que el servidor esté activo."
+                is java.net.SocketTimeoutException -> "Tiempo de espera agotado. El servidor no responde."
+                is com.google.gson.JsonSyntaxException -> "Error en la respuesta del servidor (JSON inválido). Es posible que el servidor haya enviado un error PHP en lugar de datos."
+                else -> "Error de conexión: ${e.message}"
             }
 
             // 2. Fallback: Solo si falla la conexión, intentamos locales
@@ -59,7 +59,7 @@ class LoginDataSource {
                 Result.Success(fakeUser)
             } else {
                 android.util.Log.w("LOGIN_DEBUG", "Credenciales locales también fallaron.")
-                Result.Error(IOException("Error de conexión y credenciales incorrectas", e))
+                Result.Error(IOException("$connectionError Además, las credenciales locales no coinciden.", e))
             }
         }
     }

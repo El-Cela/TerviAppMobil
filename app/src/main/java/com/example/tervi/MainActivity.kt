@@ -43,9 +43,10 @@ class MainActivity : AppCompatActivity() {
         val sessionManager = SessionManager(this)
         val userId = sessionManager.getUserId()
         val userName = sessionManager.getUserName()
+        val userUsername = sessionManager.getUserUsername()
 
         // Redirigir al login si no hay sesión
-        if (userId == null || userName == null) {
+        if (userId == null || userName == null || userUsername == null) {
             val intent = Intent(this, MainInicio::class.java)
             startActivity(intent)
             finish()
@@ -70,9 +71,9 @@ class MainActivity : AppCompatActivity() {
         swipeRefreshLayout.setOnRefreshListener {
             val sManager = SessionManager(this)
             val uId = sManager.getUserId()
-            val uName = sManager.getUserName()
-            if (uId != null && uName != null) {
-                cargarActividades(uId, uName)
+            val uUsername = sManager.getUserUsername()
+            if (uId != null && uUsername != null) {
+                cargarActividades(uId, uUsername)
             } else {
                 swipeRefreshLayout.isRefreshing = false
             }
@@ -152,16 +153,18 @@ class MainActivity : AppCompatActivity() {
 
             dialog.show()
         }
+        // Carga inicial
+        cargarActividades(userId, userUsername)
     }
 
     override fun onResume() {
         super.onResume()
         val sessionManager = SessionManager(this)
         val userId = sessionManager.getUserId()
-        val userName = sessionManager.getUserName()
+        val userUsername = sessionManager.getUserUsername()
 
-        if (userId != null && userName != null) {
-            cargarActividades(userId, userName)
+        if (userId != null && userUsername != null) {
+            cargarActividades(userId, userUsername)
         }
     }
 

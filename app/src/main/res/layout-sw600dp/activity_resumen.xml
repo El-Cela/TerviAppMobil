@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:context=".ResumenActivity"
-            android:padding="16dp">
+            android:padding="32dp">
 
             <Button
                 android:id="@+id/btn_regresar_resumen"
@@ -36,37 +36,39 @@
                 android:id="@+id/text_resumen_obj"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:fontFamily="@font/alfa_slab_one"
                 android:text="@string/resumen_text"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
-                android:textSize="24sp"
+                android:textSize="36sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_regresar_resumen" />
 
-            <!-- Card Progreso -->
+            <!-- Card Progreso (Centered and max width) -->
             <View
                 android:id="@+id/view3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/borde_redondo"
-                app:layout_constraintDimensionRatio="H,16:6"
+                app:layout_constraintDimensionRatio="H,16:5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_resumen_obj" />
+                app:layout_constraintTop_toBottomOf="@+id/text_resumen_obj"
+                app:layout_constraintWidth_max="600dp" />
 
             <TextView
                 android:id="@+id/text_progreso"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/alfa_slab_one"
                 android:text="@string/resumen_text2"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/view3"
                 app:layout_constraintStart_toStartOf="@+id/view3"
                 app:layout_constraintTop_toTopOf="@+id/view3" />
@@ -79,64 +81,77 @@
                 android:text="@string/objetivos_c"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
-                android:textSize="20sp"
+                android:textSize="28sp"
                 app:layout_constraintBottom_toBottomOf="@+id/view3"
                 app:layout_constraintEnd_toEndOf="@+id/view3"
                 app:layout_constraintStart_toStartOf="@+id/view3"
                 app:layout_constraintTop_toBottomOf="@+id/text_progreso" />
 
-            <!-- Card Actividades -->
-            <View
-                android:id="@+id/view7"
+            <!-- Row for Activities and Exercises -->
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/borde_redondo"
-                app:layout_constraintDimensionRatio="H,16:6"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view3" />
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:layout_constraintWidth_max="800dp">
 
-            <Button
-                android:id="@+id/btn_historial_actividades"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:fontFamily="@font/alfa_slab_one"
-                android:text="Actividades"
-                android:textColor="@color/Blanco"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="@+id/view7"
-                app:layout_constraintEnd_toEndOf="@+id/view7"
-                app:layout_constraintStart_toStartOf="@+id/view7"
-                app:layout_constraintTop_toTopOf="@+id/view7" />
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/borde_redondo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/view8"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Card Ejercicios -->
-            <View
-                android:id="@+id/view8"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/borde_redondo"
-                app:layout_constraintDimensionRatio="H,16:6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view7" />
+                <Button
+                    android:id="@+id/btn_historial_actividades"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="Actividades"
+                    android:textSize="24sp"
+                    android:textColor="@color/Blanco"
+                    app:layout_constraintBottom_toBottomOf="@+id/view7"
+                    app:layout_constraintEnd_toEndOf="@+id/view7"
+                    app:layout_constraintStart_toStartOf="@+id/view7"
+                    app:layout_constraintTop_toTopOf="@+id/view7" />
 
-            <Button
-                android:id="@+id/btn_historial_ejercicios"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:fontFamily="@font/alfa_slab_one"
-                android:text="Ejercicios"
-                android:textColor="@color/Blanco"
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/borde_redondo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/view7"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="@+id/view8"
-                app:layout_constraintEnd_toEndOf="@+id/view8"
-                app:layout_constraintStart_toStartOf="@+id/view8"
-                app:layout_constraintTop_toTopOf="@+id/view8" />
+                <Button
+                    android:id="@+id/btn_historial_ejercicios"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="Ejercicios"
+                    android:textSize="24sp"
+                    android:textColor="@color/Blanco"
+                    app:layout_constraintBottom_toBottomOf="@+id/view8"
+                    app:layout_constraintEnd_toEndOf="@+id/view8"
+                    app:layout_constraintStart_toStartOf="@+id/view8"
+                    app:layout_constraintTop_toTopOf="@+id/view8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

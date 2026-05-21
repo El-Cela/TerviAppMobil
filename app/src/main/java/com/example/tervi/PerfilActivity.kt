@@ -21,20 +21,32 @@ class PerfilActivity : AppCompatActivity() {
         val textUsuario = findViewById<Button>(R.id.text_usuario)
         val textId = findViewById<Button>(R.id.id)
         val btnRegresar = findViewById<Button>(R.id.btn_qr)
+        val textEmail = findViewById<Button>(R.id.dias_t)
+        val textNombre = findViewById<Button>(R.id.nombre)
+        val textApellidos = findViewById<Button>(R.id.apellidos)
+        val textGenero = findViewById<Button>(R.id.genero)
+
+        fun updateUI() {
+            textUsuario.text = "USUARIO: ${sessionManager.getUserUsername() ?: "Invitado"}"
+            textId.text = "ID: ${sessionManager.getUserId() ?: "000"}"
+            textEmail.text ="CORREO: ${sessionManager.getUserEmail() ?: "Sin correo"}"
+            textNombre.text = "NOMBRE: ${sessionManager.getUserFirstName() ?: "Nombre"}"
+            val apellidos = "APELLIDOS: ${sessionManager.getUserLastNameP() ?: ""} ${sessionManager.getUserLastNameM() ?: ""}".trim()
+            textApellidos.text = if (apellidos.isNotEmpty()) apellidos else "Apellidos"
+            textGenero.text = "GÉNERO: ${sessionManager.getUserGender() ?: "Género"}"
+        }
 
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout)
         swipeRefreshLayout.setOnRefreshListener {
             // En Perfil, como los datos son de sesión, solo simulamos el refresco
             // o podrías volver a leer de SharedPreferences
-            textUsuario.text = sessionManager.getUserName() ?: "Invitado"
-            textId.text = "ID: ${sessionManager.getUserId() ?: "000"}"
+            updateUI()
             
             swipeRefreshLayout.isRefreshing = false
         }
 
         // Mostrar datos de sesión
-        textUsuario.text = sessionManager.getUserName() ?: "Invitado"
-        textId.text = "ID: ${sessionManager.getUserId() ?: "000"}"
+        updateUI()
 
         btnRegresar.setOnClickListener {
             finish() // Volver atrás

@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <gradient
-        android:startColor="@color/dorado_tervi"
-        android:endColor="#785F16"
-        android:angle="0" />
+    <solid android:color="@color/dorado_tervi" />
 
     <corners android:radius="14dp" />
 
-    <padding
-        android:left="10dp"
-        android:right="10dp"
-        android:top="5dp"
-        android:bottom="5dp" />
+    <stroke
+        android:width="4dp"
+        android:color="@color/dorado_tervi" />
 </shape>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp">
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+        android:foreground="@drawable/borde_redondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Nombre Ejercicio"
+        android:textColor="@color/Blanco"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_secondary"
+        app:layout_constraintEnd_toStartOf="@+id/text_extra"
+        app:layout_constraintStart_toStartOf="@+id/view_background"
+        app:layout_constraintTop_toTopOf="@+id/view_background"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/text_secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Subtitulo"
+        android:textColor="@color/Blanco"
+        android:textSize="14sp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toBottomOf="@+id/view_background"
+        app:layout_constraintEnd_toStartOf="@+id/text_extra"
+        app:layout_constraintStart_toStartOf="@+id/view_background"
+        app:layout_constraintTop_toBottomOf="@+id/text_main" />
+
+    <TextView
+        android:id="@+id/text_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Extra"
+        android:textColor="@color/Blanco"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_background"
+        app:layout_constraintEnd_toEndOf="@+id/view_background"
+        app:layout_constraintTop_toTopOf="@+id/view_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

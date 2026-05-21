@@ -23,38 +23,42 @@
 
             <View
                 android:id="@+id/view4"
-                android:layout_width="379dp"
+                android:layout_width="0dp"
                 android:layout_height="140dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/borde_redondo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 
             <View
                 android:id="@+id/view6"
-                android:layout_width="379dp"
+                android:layout_width="0dp"
                 android:layout_height="140dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/borde_redondo"
-                app:layout_constraintTop_toBottomOf="@+id/view4"
-                tools:layout_editor_absoluteX="16dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
 
             <TextView
                 android:id="@+id/ejercicio_titulo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
+                android:layout_marginStart="52dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Ejercicio"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintEnd_toStartOf="@+id/puntaje_titulo2"
+                app:layout_constraintHorizontal_bias="0.104"
                 app:layout_constraintStart_toStartOf="@+id/view4"
                 app:layout_constraintTop_toTopOf="@+id/view4"
                 app:layout_constraintVertical_bias="0.381" />
@@ -63,7 +67,6 @@
                 android:id="@+id/puntaje_titulo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="60dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Puntaje"
                 android:textAlignment="center"
@@ -71,6 +74,8 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/view4"
                 app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0.799"
+                app:layout_constraintStart_toStartOf="@+id/view4"
                 app:layout_constraintTop_toTopOf="@+id/view4"
                 app:layout_constraintVertical_bias="0.381" />
 
@@ -78,30 +83,34 @@
                 android:id="@+id/puntaje"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
+                android:layout_marginEnd="76dp"
                 android:layout_marginBottom="32dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="123"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/view4"
-                app:layout_constraintEnd_toEndOf="@+id/view4" />
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0.971"
+                app:layout_constraintStart_toEndOf="@+id/nombrre_ejercicio_puntos"
+                app:layout_constraintTop_toBottomOf="@+id/puntaje_titulo2"
+                app:layout_constraintVertical_bias="0.785" />
 
             <TextView
                 android:id="@+id/nombrre_ejercicio_puntos"
-                android:layout_width="94dp"
+                android:layout_width="164dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="36dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Ejercicio tal"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/view4"
                 app:layout_constraintStart_toStartOf="@+id/view4"
-                app:layout_constraintTop_toTopOf="@+id/view4"
-                app:layout_constraintVertical_bias="0.827" />
+                app:layout_constraintTop_toBottomOf="@+id/ejercicio_titulo2"
+                app:layout_constraintVertical_bias="0.423" />
 
             <TextView
                 android:id="@+id/avance"
@@ -122,11 +131,11 @@
                 android:layout_width="291dp"
                 android:layout_height="85dp"
                 android:fontFamily="@font/alfa_slab_one"
+                android:textColor="@color/Blanco"
                 android:text="Resumen"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/view6"
                 app:layout_constraintEnd_toEndOf="@+id/view6"
-                app:layout_constraintHorizontal_bias="0.534"
                 app:layout_constraintStart_toStartOf="@+id/view6"
                 app:layout_constraintTop_toTopOf="@+id/view6" />
 
@@ -189,24 +198,25 @@
                 app:strokeColor="@color/Blanco"
                 app:strokeWidth="2dp" />
 
+
             <TextView
                 android:id="@+id/text_objetivos"
-                android:layout_width="219dp"
-                android:layout_height="48dp"
+                android:layout_width="269dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/alfa_slab_one"
                 android:text="@string/objetivos"
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.182"
+                app:layout_constraintHorizontal_bias="0.478"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_perfil" />
 
             <View
                 android:id="@+id/view_Conv"
-                android:layout_width="370dp"
+                android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
@@ -216,30 +226,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_objetivos" />
 
-
             <TextView
                 android:id="@+id/obj_1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="5 flexiones,  8 Sentadillas, 3 Flexiones"
                 android:textColor="@color/Blanco"
                 android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/view_Conv"
                 app:layout_constraintStart_toStartOf="@+id/view_Conv"
                 app:layout_constraintTop_toTopOf="@+id/view_Conv" />
 
             <View
                 android:id="@+id/view3"
-                android:layout_width="376dp"
+                android:layout_width="0dp"
                 android:layout_height="134dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/borde_redondo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view_Conv" />
 
@@ -288,27 +297,29 @@
                 android:id="@+id/repeticiones_programadas_titulo"
                 android:layout_width="117dp"
                 android:layout_height="43dp"
-                android:layout_marginStart="128dp"
                 android:layout_marginTop="28dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Repeticiones programadas"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintEnd_toStartOf="@+id/repeticiones_hechas_titulo"
+                app:layout_constraintHorizontal_bias="0.714"
+                app:layout_constraintStart_toEndOf="@+id/ejercicio_titulo"
                 app:layout_constraintTop_toTopOf="@+id/view3" />
 
             <TextView
                 android:id="@+id/repeticiones_hechas_titulo"
                 android:layout_width="115dp"
                 android:layout_height="38dp"
-                android:layout_marginStart="272dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="32dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Repeticiones hechas"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintHorizontal_bias="0.943"
                 app:layout_constraintStart_toStartOf="@+id/view3"
                 app:layout_constraintTop_toTopOf="@+id/view3" />
 
@@ -317,41 +328,45 @@
                 android:layout_width="98dp"
                 android:layout_height="54dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="Flexión de Rodilla en Camilla"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 app:layout_constraintStart_toStartOf="@+id/view3"
-                app:layout_constraintTop_toTopOf="@+id/view3" />
+                app:layout_constraintTop_toBottomOf="@+id/ejercicio_titulo" />
 
             <TextView
                 android:id="@+id/repeticiones_programadas"
                 android:layout_width="76dp"
                 android:layout_height="29dp"
-                android:layout_marginStart="148dp"
-                android:layout_marginTop="84dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="8"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@+id/view3"
-                app:layout_constraintTop_toTopOf="@+id/view3" />
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toStartOf="@+id/repeticiones_hechas"
+                app:layout_constraintStart_toEndOf="@+id/ejercicio"
+                app:layout_constraintTop_toBottomOf="@+id/repeticiones_programadas_titulo" />
 
             <TextView
                 android:id="@+id/repeticiones_hechas"
                 android:layout_width="76dp"
                 android:layout_height="29dp"
-                android:layout_marginStart="276dp"
-                android:layout_marginTop="84dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="1"
                 android:textAlignment="center"
                 android:textColor="@color/Blanco"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="@+id/view3"
-                app:layout_constraintTop_toTopOf="@+id/view3" />
+                app:layout_constraintTop_toBottomOf="@+id/repeticiones_hechas_titulo"
+                app:layout_constraintVertical_bias="0.086" />
 
             <TextView
                 android:id="@+id/text_puntaje"

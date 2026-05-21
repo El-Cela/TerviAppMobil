@@ -54,6 +54,8 @@
 
     <!-- Strings Retos diarios -->
     <string name="title_retos">Retos Diarios</string>
+    <string name="title_historial_actividades">Historial de Actividades</string>
+    <string name="title_historial_ejercicios">Historial de Ejercicios</string>
 
     <!-- String diario -->
     <string name="diario_text">Diario de actividades</string>

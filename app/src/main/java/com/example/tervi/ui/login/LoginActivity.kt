@@ -113,7 +113,17 @@ class LoginActivity : AppCompatActivity() {
         
         // Guardar sesión localmente
         val sessionManager = SessionManager(this)
-        sessionManager.saveUser(model.userId, displayName, model.email, model.healthStatus)
+        sessionManager.saveUser(
+            model.userId,
+            displayName,
+            model.email,
+            model.healthStatus,
+            model.username,
+            model.firstName,
+            model.lastNameP,
+            model.lastNameM,
+            model.gender
+        )
 
         Toast.makeText(
             applicationContext,
